@@ -1,9 +1,7 @@
 /*eslint-env es6*/
 /*eslint no-mixed-spaces-and-tabs: ["error", "smart-tabs"]*/
 /*eslint no-fallthrough: "off"*/
-if(!window){
-	var $,window;
-}
+/*eslint no-undef: "off"*/
 $(function(){
 	let today = new Date,
 		time = `${today.getHours() ? (today.getHours() > 12 ? today.getHours() - 12 : today.getHours()) : 12}:${today.getMinutes() < 10 ? "0"+today.getMinutes() : today.getMinutes()} ${today.getHours() > 11 ? "PM" : "AM"}`,
@@ -32,7 +30,7 @@ $(function(){
 	
 	function loadInfo(hash){
 		$(".active").removeClass("active")
-		switch(hash){
+		switch(hash || "#about"){
 			case "#bug":
 				$("#info").html(bug);
 				$('tr[house="bug"]').addClass("active")
