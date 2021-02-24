@@ -78,10 +78,12 @@ $(function(){
 				$('tr[house="about"]').addClass("active")
 		}
 	}
+	
 	$(window).on("hashchange", function(){
 		if(window.location.hash != "#")
 			loadInfo(window.location.hash);
 	})
+	$(".footer span").html("Doc Bot is licensed under<br />an MIT License.")
 	
-	loadInfo(window.location.hash || "#")
+	loadInfo(window.location.hash)
 })
