@@ -76,7 +76,7 @@ $(function(){
 		if(window.location.hash != "#")
 			loadInfo(window.location.hash);
 	})
-	$(".footer span").html('Doc Bot is licensed under<br/>the <a rel="license" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License Version 2.0</a>.')
+	$(".license span").html('Doc Bot is licensed under<br/>the <a rel="license" href="https://www.apache.org/licenses/LICENSE-2.0">Apache License Version 2.0</a>.')
 	
 	loadInfo(window.location.hash)
 	$("#info").removeAttr("style")
